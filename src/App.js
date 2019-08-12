@@ -12,7 +12,7 @@ function App() {
   const [quarter, setQuarter] = useState(1);
 
   const nextQuarter = quarter => {
-    if(quarter < 4) {
+    if(quarter < 4 && quarter !== "OT") {
       setQuarter(quarter + 1);
     } else {
       setQuarter(1);
@@ -50,8 +50,9 @@ function App() {
           <button className="awayButtons__fieldGoal" onClick={() => setAwayScore(awayScore + 3)}>Away Field Goal</button>
         </div>
         <div className="quarterButtons">
-          <button className="quarterButtons___nextQuarter" onClick={() => nextQuarter(quarter)}>Next Quarter</button>
-          <button className="quarterButtons___resetQuarters"onClick={() => setQuarter(1)}>Reset to 1st Q</button>
+          <button className="quarterButtons__nextQuarter" onClick={() => nextQuarter(quarter)}>Next Quarter</button>
+          <button className="quarterButtons__ot" onClick={() => setQuarter("OT")}>Overtime</button>
+          <button className="quarterButtons__resetQuarters"onClick={() => setQuarter(1)}>Reset to 1st Q</button>
         </div>    
       </section>
     </div>
