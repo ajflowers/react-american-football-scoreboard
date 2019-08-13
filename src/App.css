@@ -119,7 +119,8 @@
 .awayButtons__fieldGoal,
 .quarterButtons__nextQuarter,
 .quarterButtons__ot,
-.quarterButtons__resetQuarters {
+.quarterButtons__resetQuarters,
+.resetButton__reset {
   margin: 1rem;
   border-radius: 4px;
 }
